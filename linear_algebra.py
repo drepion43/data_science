@@ -12,6 +12,14 @@ from typing import List
 Vector=List[float]
 Matrix=List[List[float]]
 
+def subtract(v:Vector, w:Vector)->Vector:
+    assert len(v)==len(w), "vectors must be the same length"
+    return[v_i-w_i for v_i,w_i in zip(v,w)]
+
+def sclar_multiply(c:float, v:Vector)->Vector:
+    
+    return[c*v_i for v_i in v]
+
 def vector_add(v, w):
     """adds two vectors componentwise"""
     return [v_i + w_i for v_i, w_i in zip(v,w)]
